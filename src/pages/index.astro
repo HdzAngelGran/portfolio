@@ -1,5 +1,30 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Intro from '../components/Intro.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import BackpackIcon from '../icons/BackpackIcon.astro'
+import TitleSection from '../components/TitleSection.astro'
+import AvatarIcon from '../icons/AvatarIcon.astro'
+import Experience from '../components/Experience.astro'
+import AboutMe from '../components/AboutMe.astro'
 ---
 
-<Layout />
+<Layout
+  title="Angel's Portfolio - Lead Web Developer and Fullstack Developer 3 years of experience"
+  description="Hire Angel to create your web app. Lead Web Developer and Fullstack Developer. Specialized in building unique and personalized apps.">
+  <main class="px-4">
+    <SectionContainer id="intro" class="py-16 md:py-36">
+      <Intro />
+    </SectionContainer>
+
+    <div class="space-y-24">
+      <SectionContainer id="experience">
+        <TitleSection>
+          <BackpackIcon class="size-8" />
+          Experience
+        </TitleSection>
+        <Experience />
+      </SectionContainer>
+    </div>
+  </main>
+</Layout>

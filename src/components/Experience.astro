@@ -1,0 +1,29 @@
+---
+import ExperienceItem from './ExperienceItem.astro'
+const EXPERIENCE = [
+  {
+    date: 'Current',
+    title: 'Lead Web Developer',
+    company: 'Wundertec',
+    description:
+      'Responsible for spearheading the development, optimization and maintenance of robust web applications as well as collaborate with cross-functional teams to translate business requirements into technical specifications, managing project timelines and ensuring the timely delivery of high-quality digital solutions.',
+  },
+  {
+    date: 'March 2022 - June 2024',
+    title: 'Fullstack Developer',
+    company: 'Wundertec',
+    description:
+      'Responsible for designing, developing and maintaining both the front-end and back-end components of web applications by creating user interfaces and server-side functionality and integrating with databases and third-party services.',
+  },
+]
+---
+
+<ol class="relative mt-16">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
