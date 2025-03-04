@@ -1,0 +1,42 @@
+---
+const { title, technologies } = Astro.props
+---
+
+<div class="w-2/3 lg:w-2/5 flex">
+  <section class="card w-full p-5 flex flex-col leading-normal">
+    <div class="font-bold text-2xl mb-5 text-center text-yellow-400">
+      {title}
+    </div>
+    <ul class="grid grid-cols-3 gap-y-6">
+      {
+        technologies.map((technology: { name: string; icon: any }) => (
+          <li>
+            <div class="flex flex-col items-center gap-x-2 gap-y-1">
+              <technology.icon class="size-15" />
+              <p>{technology.name}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</div>
+
+<style>
+  .card {
+    backdrop-filter: blur(20px);
+    border-width: 1px;
+    border-radius: 25px;
+    border-color: rgba(0, 0, 0);
+    backdrop-filter: blur(20px);
+    background-color: rgb(229, 229, 229);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .card {
+      background: rgba(0, 0, 0, 0.3);
+      border-color: rgba(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+</style>
