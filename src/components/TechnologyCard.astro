@@ -13,7 +13,7 @@ const { title, technologies } = Astro.props
           <li>
             <div class="flex flex-col items-center gap-x-2 gap-y-1">
               <technology.icon class="size-15" />
-              <p>{technology.name}</p>
+              <p class="dark:text-white">{technology.name}</p>
             </div>
           </li>
         ))
@@ -21,22 +21,3 @@ const { title, technologies } = Astro.props
     </ul>
   </section>
 </div>
-
-<style>
-  .card {
-    backdrop-filter: blur(20px);
-    border-width: 1px;
-    border-radius: 25px;
-    border-color: rgba(0, 0, 0);
-    backdrop-filter: blur(20px);
-    background-color: rgb(229, 229, 229);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    .card {
-      background: rgba(0, 0, 0, 0.3);
-      border-color: rgba(0, 0, 0);
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-  }
-</style>
