@@ -81,3 +81,9 @@
     fill: white;
   }
 }
+
+#express-a {
+  @variant dark {
+    fill: white;
+  }
+}
